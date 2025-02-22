@@ -22,3 +22,5 @@ echo [%TIMESTAMP%] Ñêğèïò çàïóùåí >> git_auto_commit.log
 
 REM Îòêğûâàåò Git Bash è âûïîëíÿåò êîìàíäû
 start "Git Bash" "C:\Program Files\Git\bin\bash.exe" -c "cd '%PROJECT_PATH%' && eval $(ssh-agent -s) && ssh-add ~/.ssh/1 && if [ -n \"$(git status --porcelain)\" ]; then git add . && git commit -m '%COMMIT_MESSAGE%' && git push origin main; else echo 'Íåò èçìåíåíèé äëÿ êîììèòà.'; fi >> git_auto_commit.log 2>&1"
+
+pause
